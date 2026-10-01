@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Smart AI - 앱 다운로드</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #f8fafc;
+        }
+
+        /* Custom animation for background orbs */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* Glassmorphism utility */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7); /* Slate 800 with opacity */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="relative min-h-screen overflow-hidden flex items-center justify-center selection:bg-purple-500 selection:text-white">
+
+    <!-- Background Animated Gradients -->
+    <div class="absolute w-full h-full inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 w-full max-w-md px-6 py-12 mx-auto flex flex-col items-center text-center">
+        
+        <!-- Glassmorphism Card Wrapper -->
+        <div class="glass-card w-full rounded-[2.5rem] p-8 sm:p-10 shadow-2xl flex flex-col items-center transform transition-all hover:scale-[1.02] duration-500">
+            
+            <!-- App Icon / Logo Graphic -->
+            <div class="w-24 h-24 mb-6 rounded-3xl bg-gradient-to-br from-blue-400 to-purple-600 p-[3px] shadow-[0_0_30px_rgba(139,92,246,0.3)]">
+                <div class="w-full h-full bg-slate-900 rounded-[21px] flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#60a5fa" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        <path d="M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10z"/>
+                        <!-- Adding an AI spark feel -->
+                        <path d="M12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="white" stroke="none" />
+                        <path d="M15 15a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="white" stroke="none" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Typography -->
+            <span class="px-3 py-1 text-xs font-semibold tracking-wider text-purple-300 bg-purple-900/50 rounded-full border border-purple-500/30 mb-4">
+                출시 완료
+            </span>
+            
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
+                Smart AI
+            </h1>
+            
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8 max-w-[280px]">
+                <strong class="text-white block mb-1 text-lg">스마트 학습 시스템</strong>
+                모바일 기기에서 차세대 인공지능을 경험해보세요. 빠르고 똑똑하며 완벽하게 직관적입니다.
+            </p>
+
+            <!-- Download Button -->
+            <a href="https://github.com/jgyunam-dot/SmartAI/releases/download/SmartAI/SmartAI.apk" 
+               class="group relative inline-flex items-center justify-center w-full px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-blue-500 hover:to-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 shadow-[0_0_20px_rgba(147,51,234,0.4)] hover:shadow-[0_0_30px_rgba(147,51,234,0.6)]">
+                
+                <span class="mr-2">APK 다운로드</span>
+                
+                <!-- Download Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition-transform group-hover:-translate-y-1 group-hover:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+            </a>
+            
+            <div class="mt-4 flex items-center justify-center space-x-2 text-xs text-slate-400">
+                <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>공식 안전 다운로드</span>
+            </div>
+            
+            <p class="mt-6 text-xs text-slate-500 max-w-[250px] break-keep">
+                다운로드 시 이용약관 및 개인정보 처리방침에 동의하는 것으로 간주됩니다. 안드로이드 8.0 이상 기기와 호환됩니다.
+            </p>
+        </div>
+    </main>
+
+</body>
+</html>
